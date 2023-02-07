@@ -1,0 +1,75 @@
+**Probably completly wrong about everything**
+
+Probs on test:
+will be given a csv file along with a semi broken python code
+our job will be to repair exisiting code and add function/new code 
+probs will have to create a report and maybe format/spacing - project 2
+example: 
+	city, gas price, date
+	from csv file find the lowest price that gas has been in vancouver:
+print/in a report/new file:
+	Vancouver 		.99C per/L    january 1993
+	Vancouver 		1.02 per/L    July    2001
+
+
+1. go through test 4 setup - must do before test
+	https://www.youtube.com/watch?v=w8QHoVam1-I
+
+ 	from last class - gas data, found on discord 
+
+2. using the following code, fix any bugs and improve on existing code using debug in vscode 
+	refer to test 4 setup to get debug working
+3. finish any incomplete functions 
+
+extra notes:
+	given city and date, find the month where gas was the cheapest (lower_prices_dates())
+
+import csv
+import pathlib
+
+
+def get_gas_data(data_path):
+    gas_data = []
+    with open(data_path) as f:
+        reader = csv.reader(f)
+        for row in reader:
+            gas_data.append(row)
+    return gas_data
+
+
+def get_city_index(gas_data, city):
+    cities = [row[0].lower() for row in gas_data]
+    return cities.index(city)
+
+
+def get_date_column(gas_data, the_date):
+    return gas_data[0].index(the_date)
+
+
+def lower_prices_dates(gas_data, city):
+    city_row = get_city_index(gas_data, city.lower())
+    lower_price = min(float(c) for c in gas_data[city_aow][1:])
+    lowest_dates = [gas_data[0][city_row - 1]]
+
+    for col, price in enumerate(gas_data[city_row]):
+        if float(col) == lower_price:
+            lowest_dates.append(gas_data[1][col + 1])
+    return lowest_dates, lower_price
+
+
+# def prices_cities_for_date(gas_data, the_date):
+#     pass price, city
+
+
+def main():
+    data_file = pathlib.Path(__file__).parent / "gas_prices.csv"
+    # for row in get_gas_data(data_file):
+    #     print(row)
+    gas_data = get_gas_data(data_file)
+    cities = [row[0].lower() for row in gas_data]
+    print(cities)
+    print(lower_prices_dates(gas_data, "victoria"))
+
+
+if __name__ == "__main__":
+    main()

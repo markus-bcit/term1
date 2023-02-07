@@ -1,0 +1,42 @@
+create database Ex2
+go
+
+use Ex2
+go
+
+
+create table Customers
+(
+	CUSTOMER_NUM	char(10) primary key, 
+	LName 		char(20),
+	Address		char(20),
+	Amount_Spent	money,
+	Type			char(20),
+		foreign key refrences GROUP_OF_ART,
+	Artist_Names	char(20)
+				foreign key refrences GROUP_OF_ART
+
+)
+
+create table GROUP_OF_ART 
+(
+	Type		char(10) primary key,
+	name		char(10),
+)
+
+create table ARTWORK
+(
+	Title			char(10) primary key,
+	Artist_Name	char(10),
+	Year			date,
+	Type			char(10)
+		foreign key references GROUP_OF_ART,
+)
+
+create table GALLERY
+(
+	Artist_Name	char(10) primary key,
+	Birthplace		char(10),
+	Age			char(3),
+	Style 		char(10)
+)

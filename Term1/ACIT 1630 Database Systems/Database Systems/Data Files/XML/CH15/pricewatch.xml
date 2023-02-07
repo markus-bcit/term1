@@ -1,0 +1,32 @@
+<?xml version ="1.0"?>
+<!DOCTYPE Pricewatchdata SYSTEM "Pricewatch.dtd">
+<Pricewatchdata>
+<Pricewatch>
+<PW_ID>1201</PW_ID>
+<PW_DATE>08/01/2015</PW_DATE>
+<CUS_ID>1010</CUS_ID>
+<PW_CUS_NAME>John Smith</PW_CUS_NAME>
+<PW_CUS_EMAIL>jsmith@yahoo.com</PW_CUS_EMAIL>
+<PW_ENDATE>12/20/2016</PW_ENDATE>
+<PROD_ID>TB670</PROD_ID>
+<PW_LOWPRICE>5.00</PW_LOWPRICE>
+</Pricewatch>
+<Pricewatch>
+<PW_ID>1202</PW_ID>
+<PW_DATE>08/03/2015</PW_DATE>
+<PW_CUS_NAME>Pete Rosales</PW_CUS_NAME>
+<PW_CUS_EMAIL>prosales@msn.com</PW_CUS_EMAIL>
+<PW_ENDATE>10/15/2015</PW_ENDATE>
+<PROD_ID>QWERT-456</PROD_ID>
+<PW_LOWPRICE>2.00</PW_LOWPRICE>
+</Pricewatch>
+<Pricewatch>
+<PW_ID>1203</PW_ID>
+<PW_DATE>08/12/2015</PW_DATE>
+<PW_CUS_NAME>Uvaldo R. Good</PW_CUS_NAME>
+<PW_CUS_EMAIL>yrgood@dell.com</PW_CUS_EMAIL>
+<PW_ENDATE>08/12/2016</PW_ENDATE>
+<PROD_ID>TR-876</PROD_ID>
+<PW_LOWPRICE>25.00</PW_LOWPRICE>
+</Pricewatch>
+</Pricewatchdata>

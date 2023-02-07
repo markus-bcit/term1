@@ -1,0 +1,31 @@
+create table Employees
+(
+	EmpNo char(10) primary key,
+	LastName char(20),
+	FirstName char(20),
+	eMail  char(30)
+)
+
+use DB1
+go
+
+insert into Employees values
+(
+	'E01',
+	'Smith',
+	'John',
+	'jsmith@msn.com'
+)
+
+insert into Employees values
+(	
+	'E02',
+	'Brown',
+	'Jane',
+	'jbrown@gmail.com'
+)
+
+#retrieve form table 
+
+select * from Employees
+

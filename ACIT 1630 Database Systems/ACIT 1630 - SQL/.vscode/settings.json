@@ -1,0 +1,5 @@
+{
+    "dataworkspace.excludedProjects": [
+        "Lesson9/Lesson9.sqlproj"
+    ]
+}
